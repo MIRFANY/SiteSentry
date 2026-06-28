@@ -66,7 +66,7 @@ async def analyze_and_annotate(
     # Cleanup upload
     os.remove(upload_path)
 
-    result["annotated_pdf_url"] = f"/download/{file.filename}"
+    result["annotated_filename"] = file.filename
     return result
 
 @app.get("/download/{filename}")
